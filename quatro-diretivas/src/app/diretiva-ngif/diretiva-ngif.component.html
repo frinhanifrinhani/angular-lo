@@ -1,3 +1,4 @@
+<!--
 <h5>*ngIf</h5>
 
 <div *ngIf="cursos.length > 0">
@@ -8,19 +9,34 @@
 </div>
 
 <div *ngIf="mostrarCursos">
-  Lista de Cursos aqui.
+  Lista de Cursos aqui1.
 </div>
 <div *ngIf="!mostrarCursos">
   Não existem cursos para serem listados
 </div>
 
-<br>
+<br>-->
 <button (click)="onMostrarCursos()">Mostrar/esconder cursos</button>
-
+<!--
 <h5>Hidden como alternativa</h5>
 <div [hidden]="!mostrarCursos">
   Lista de Cursos aqui.
 </div>
 <div [hidden]="mostrarCursos">
   Não existem cursos para serem listados
+</div>
+-->
+<h5>Aula 25 </h5>
+<div *ngIf="mostrarCursos">
+  Lista de Cursos aqui 1
+</div>
+<!-- 
+  Não rodou
+  <template [ngIf]="mostrarCursos">
+  <div>
+    Lista de Cursos aqui 1
+  </div>
+</template> -->
+<div template="ngIf mostrarCursos">
+  Lista de Cursos aqui 2
 </div>
