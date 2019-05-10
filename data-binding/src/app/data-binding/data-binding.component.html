@@ -30,12 +30,12 @@
       </select>
       <br />
       <br />
-      
+
       <div class="alert {{ classe.value }}" role="alert">
         Texto colorido conforme valor do combobox.
       </div>
 
-      <div class="alert" role="alert" 
+      <div class="alert" role="alert"
         [class.alert-success]="classe.value == 'alert-success' ">
         Sucesso
       </div>
@@ -75,12 +75,12 @@
 
       <br><br>
 
-      /*<input type="text" 
+      /*<input type="text"
         (keyup)="onKeyUp($event)"
         (keyup.enter)="salvarValor($event.target.value)"
         (blur)="salvarValor($event.target.value)"
          /> */
-         <input type="text" 
+         <input type="text"
          (keyup)="onKeyUp($event)"
          (keyup.enter)="salvarValor(campoInput.value)"
          (blur)="salvarValor(campoInput.value)"
