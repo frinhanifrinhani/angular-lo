@@ -11,3 +11,14 @@
 <p [highlight]="'red'" [defaultColor]="'grey'">
   Texto com highligth com cores customizadas.
 </p>
+
+
+<div *ngIf="mostrarCursos">
+  Lista de Cursos aqui1.
+</div>
+<div *ngElse="mostrarCursos">
+  Não existem cursos para serem listados
+</div>
+
+<br>
+<button (click)="onMostrarCursos()">Mostrar/esconder cursos</button>
