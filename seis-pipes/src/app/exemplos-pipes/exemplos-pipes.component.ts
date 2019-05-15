@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ExemplosPipesComponent implements OnInit {
 
   livro: any = {
-    titulo: 'Learning JavaScrip data Structure and Algorithms 2nd',
+    titulo: 'Learning JavaScript data Structure and Algorithms 2nd',
     rating: 4.54321,
     numeroPaginas: 314,
     preco: 44.99,
