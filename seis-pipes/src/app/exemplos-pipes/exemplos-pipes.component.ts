@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+// tslint:disable-next-line: import-blacklist
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-exemplos-pipes',
@@ -39,6 +41,14 @@ export class ExemplosPipesComponent implements OnInit {
       return false;
     });
   }
+
+  valorAsync = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('Valor assíncrono'), 2000)
+  });
+
+  /* import do rxjs não funcionou para o Observable.interval.
+  valorAsync2 = Observable.interval(2000).map(valor => 'Valor assincrono 2');
+  */
 
   constructor() { }
 
