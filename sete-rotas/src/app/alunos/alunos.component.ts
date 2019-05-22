@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
+import { AlunosService } from './alunos.service';
+
 @Component({
   selector: 'app-alunos',
   templateUrl: './alunos.component.html',
@@ -8,9 +10,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AlunosComponent implements OnInit {
 
-  constructor() { }
+  alunos: any[] = [];
+
+  constructor(private alunosService: AlunosService) { }
 
   ngOnInit() {
+    this.alunos = this.alunosService.getAlunos();
   }
 
 }
