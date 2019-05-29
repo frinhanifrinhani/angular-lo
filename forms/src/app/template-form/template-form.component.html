@@ -1,19 +1,31 @@
 <form  #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
 
+  <!-- outra maneira de fazer
+  [class.has-error]="!nome.valid && nome.touched"
+  [class.contro="!nome.valid && nome.touched" -->
+
   <div class="form-group">
-      <label for="nome">Nome</label>
+      <label for="nome" class="form-control-l">Nome</label>
       <input type="text" class="form-control" id="nome" name="nome"
         placeholder="Informe o seu nome" [(ngModel)]="usuario.nome"
-        required #nome>
+        required #nome="ngModel">
+        <div class="alert alert-danger" role="alert" *ngIf="!nome.valid && nome.touched" >
+          Nome é obrigatório
+        </div>
         <!-- <div>
           {{ nome.className}}
         </div> -->
   </div>
-  <div class="form-group">
+  <div class="form-group"
+  >
       <label for="email">Email</label>
       <input type="email" class="form-control" id="email" name="email"
         placeholder="email@email.com" [(ngModel)]="usuario.email"
-        required email>
+        required email  #email="ngModel">
+        <div *ngIf="!email.valid && email.touched"
+          class="alert alert-danger" role="alert">
+          Email invalido
+        </div>
   </div>
   <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
