@@ -5,18 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { DataFormComponent } from './data-form/data-form.component';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { FormDebugComponent } from './form-debug/form-debug.component';
+import { TemplateFormModule } from './template-form/template-form.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TemplateFormComponent,
+    //TemplateFormComponent,
     DataFormComponent
+    //FormDebugComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    TemplateFormModule
   ],
   providers: [],
   bootstrap: [AppComponent]
