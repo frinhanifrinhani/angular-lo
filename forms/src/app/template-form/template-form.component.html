@@ -3,7 +3,7 @@
   <!-- outra maneira de fazer
   [class.has-error]="!nome.valid && nome.touched"
   [class.contro="!nome.valid && nome.touched" -->
-
+<div ngModelGroup="endereco">
   <div class="form-row">
 
     <div class="col-sm-12">
@@ -95,6 +95,8 @@
     <div class="col-sm-12">
       <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Enviar</button>
     </div>
+</div>
+
 </div>
 
   <app-form-debug [form]="f"></app-form-debug>
