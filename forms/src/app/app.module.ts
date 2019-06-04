@@ -5,10 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { DataFormComponent } from './data-form/data-form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormDebugComponent } from './form-debug/form-debug.component';
 import { TemplateFormModule } from './template-form/template-form.module';
 import { CampoControlErrorComponent } from './campo-control-error/campo-control-error.component';
+import { DataFormModule } from './data-form/data-form.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { CampoControlErrorComponent } from './campo-control-error/campo-control-
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    TemplateFormModule
+    ReactiveFormsModule,
+    TemplateFormModule,
+    DataFormModule
   ],
   providers: [],
   bootstrap: [AppComponent]
